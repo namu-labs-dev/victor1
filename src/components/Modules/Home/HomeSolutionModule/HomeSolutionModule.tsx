@@ -43,7 +43,7 @@ export const HomeSolutionModule = (props: Props) => {
       </Marquee>
 
       <div className="p-8 pt-12">
-        <div className="gap-8 sm:flex-col lg:flex lg:flex-row">
+        <div className="max-768:flex-col flex gap-8">
           <div className="flex flex-col gap-8 sm:w-full lg:w-1/2">
             <div className="info-text solution-info-text">
               {props.solutionInfo}
@@ -56,7 +56,7 @@ export const HomeSolutionModule = (props: Props) => {
             <SolutionComponent solutions={props.solutions} />
           </div>
 
-          <div className="sm:w-full lg:w-1/2">
+          <div className="max-768:w-full lg:w-1/2">
             <Image
               src="/jpgs/what-we-do.jpg"
               alt=""

@@ -1,5 +1,6 @@
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
 import { counterStore } from "~/stores/CounterStore/CounterStore";
+import { headerStore } from "~/stores/HeaderStore/HeaderStore";
 import { homeIntroStore } from "~/stores/HomeIntroStore/HomeIntroStore";
 import { homePricingStore } from "~/stores/HomePricingStore/HomePricingStore";
 import { homeServiceStore } from "~/stores/HomeServiceStore/HomeServiceStore";
@@ -9,9 +10,10 @@ import { teamMemberStore } from "~/stores/TeamMemberStore/TeamMemberStore";
 
 export const HomeContainer = () => {
   const homeTemplateProps: React.ComponentProps<typeof HomeTemplate> = {
-    // homeHeaderModuleProps:{
-    //   headerProps: {}
-    // },
+    homeHeaderModuleProps: {
+      headerProps: headerStore,
+    },
+
     homeContentModuleProps: {
       introContentProps: homeIntroStore,
       solutionContentProps: homeSolutionStore,

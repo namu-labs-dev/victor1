@@ -14,8 +14,8 @@ export const CounterAtom = (props: Props) => {
   const [count, setCount] = useState(0);
 
   const { ref, inView } = useInView({
-    triggerOnce: false, // Trigger the counter only once when in view
-    threshold: 0.1, // Adjust as needed for better UX
+    triggerOnce: false, // Trigger the counter always when in view
+    threshold: 0.1,
   });
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export const CounterAtom = (props: Props) => {
   }, [inView, props.item.no]);
 
   return (
-    <div className="counter-container flex flex-col gap-4">
+    <div className="counter-container flex flex-col gap-4 max-480:mt-6">
       <CheckCircleOutlined
         style={{ color: COLORS.primary }}
         className="text-2xl"
@@ -43,12 +43,12 @@ export const CounterAtom = (props: Props) => {
 
       <div
         ref={ref}
-        className={`${inter.className} counter-number text-9xl font-black text-transparent`}
+        className={`${inter.className} counter-number text-9xl font-black text-transparent max-480:text-7xl`}
       >
         {props.item.title === "Project’s Complete" ? `${count}K` : count}
       </div>
 
-      <div className="desc-text">{props.item.title}</div>
+      <div className="desc-text max-480:w-3/4">{props.item.title}</div>
     </div>
   );
 };

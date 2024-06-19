@@ -13,7 +13,7 @@ type Props = {
 
 export const CounterModule = (props: Props) => {
   return (
-    <div className="w-full items-center justify-between bg-black p-8 pb-16 sm:flex sm:flex-wrap lg:flex">
+    <div className="flex w-full flex-wrap items-center justify-between bg-black p-8 pb-16 gap-4">
       <CounterComponent counter={props.counter} />
     </div>
   );

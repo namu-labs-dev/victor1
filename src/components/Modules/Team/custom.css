@@ -4,24 +4,29 @@
 }
 
 .team-container {
-  transition: all 0.5s ease-in;
+  /* transition: all 0.5s ease-in; */
+}
+
+.team-info-text {
+  color: var(--primary) !important;
+  font-size: 1.2rem !important;
 }
 
 .member-name {
   color: white;
   font-size: 1.4rem !important;
-  transition: all 0.5s ease-in;
+  /* transition: all 0.5s ease-in; */
 }
 
 .detail-container {
-  display: none;
+  visibility: hidden;
 }
 
 .view-details {
   font-weight: 500;
   font-size: 1rem !important;
   text-decoration: underline;
-  transition: all 0.5s ease-in;
+  /* transition: all 0.5s ease-in; */
 }
 
 .member-arrow-link {
@@ -43,15 +48,15 @@
 }
 
 .team-container:hover .name-container {
-  display: none;
+  visibility: hidden;
 }
 
 .team-container:hover .desc-text {
-  display: none;
+  visibility: hidden;
 }
 
 .team-container:hover .detail-container {
-  display: flex;
+  visibility: visible;
 }
 
 .team-container:hover .view-details {
@@ -62,4 +67,11 @@
 .social-icon:hover {
   background-color: var(--primary);
   color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .team-title-text {
+    font-size: 2rem !important;
+    text-align: center;
+  }
 }

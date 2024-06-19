@@ -19,8 +19,8 @@ type Props = {
 
 export const PricingComponent = (props: Props) => {
   return (
-    <div className="flex w-full justify-between gap-6">
-      <div className="pricing-card w-1/3">
+    <div className="max-768:flex-col flex w-full justify-between gap-6">
+      <div className="pricing-card lg:w-1/3">
         <div className="info-text join-text">{props.firstCardInfo}</div>
         <div className="info-text">{props.firstCardTitle}</div>
 

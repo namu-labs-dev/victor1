@@ -10,7 +10,7 @@ type Props = {
 
 export const PricingAtom = (props: Props) => {
   return (
-    <div className="pricing-card flex w-1/3 flex-col gap-6">
+    <div className="pricing-card flex flex-col gap-6 lg:w-1/3">
       <div className="flex items-center gap-6">
         <div className="icon-container flex items-center justify-between rounded-full">
           <SVGAtom

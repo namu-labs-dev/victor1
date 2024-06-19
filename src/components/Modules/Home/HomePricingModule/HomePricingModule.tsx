@@ -27,14 +27,12 @@ export const HomePricingModule = (props: Props) => {
       <Marquee speed={200} className="overflow-hidden">
         <div className="z-10 flex gap-10 px-8 py-0" style={{ lineHeight: 0.9 }}>
           <div
-            className={`${inter.variable} font-black text-white`}
-            style={{ fontSize: "11em" }}
+            className={`${inter.variable} pricing-design-text font-black text-white`}
           >
             PRICING
           </div>
           <div
-            className={`${inter.variable} design font-black text-transparent`}
-            style={{ fontSize: "11em" }}
+            className={`${inter.variable} design pricing-design-text font-black text-transparent`}
           >
             PACKAGE
           </div>
@@ -42,8 +40,8 @@ export const HomePricingModule = (props: Props) => {
       </Marquee>
 
       <div className="flex flex-col items-center justify-center gap-6 p-8">
-        <div className="info-text">{props.pricingInfo}</div>
-        <div className="title-text">{props.pricingTitle}</div>
+        <div className="info-text pricing-info-text">{props.pricingInfo}</div>
+        <div className="title-text pricing-title-text">{props.pricingTitle}</div>
 
         <PricingComponent
           packages={props.packages}

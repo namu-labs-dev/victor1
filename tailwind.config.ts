@@ -8,6 +8,11 @@ export default {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
+      screens: {
+        "max-480": { max: "480px" },
+        "max-768": { max: "768px" },
+        "min-320": { min: "320px" },
+      },
     },
   },
   plugins: [],

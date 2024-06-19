@@ -1,8 +1,16 @@
 import Link from "next/link";
 import { LogoAtom } from "~/components/Atoms/LogoAtom/LogoAtom";
+import { HeaderComponent } from "~/components/Components/HeaderComponent/HeaderComponent";
+
+type Links = {
+  id: number;
+  title: string;
+  url: string;
+};
 
 type Props = {
-  // Add props here
+  // links: Links[];
+  headerProps: React.ComponentProps<typeof HeaderComponent>
 };
 
 export const HeaderModule = (props: Props) => {

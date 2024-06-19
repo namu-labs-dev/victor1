@@ -13,9 +13,9 @@ type Props = {
 
 export const RecentWorkAtom = (props: Props) => {
   return (
-    <div className="project-container flex w-full items-center justify-between py-14">
-      <div className="flex w-1/3 flex-col gap-8">
-        <div className="title-text" style={{ fontWeight: "normal" }}>
+    <div className="project-container max-768:py-10 max-768:flex-col flex w-full items-center justify-between gap-6 py-14">
+      <div className="flex flex-col gap-8 lg:w-1/3">
+        <div className="title-text project-title-text" style={{ fontWeight: "normal" }}>
           0{props.item.id}
         </div>
         <Link
@@ -27,7 +27,7 @@ export const RecentWorkAtom = (props: Props) => {
         </Link>
       </div>
 
-      <div className="flex w-1/3 justify-center">
+      <div className="max-768:w-full flex w-1/3 justify-center">
         <Image
           src={props.item.img}
           alt="project-timeline"
@@ -37,7 +37,7 @@ export const RecentWorkAtom = (props: Props) => {
         />
       </div>
 
-      <div className="arrow-container flex w-1/3 justify-end">
+      <div className="arrow-container w-1/3 justify-end lg:flex">
         <Link
           href={props.item.url}
           className="flex h-full w-full items-center justify-center"

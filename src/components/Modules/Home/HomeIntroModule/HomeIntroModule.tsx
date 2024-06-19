@@ -21,7 +21,7 @@ type Props = {
 
 export const HomeIntroModule = (props: Props) => {
   return (
-    <div className="intro h-auto overflow-hidden bg-black">
+    <div className="intro h-auto overflow-hidden bg-black pt-6">
       <div className="flex items-center justify-between overflow-hidden">
         <div className="z-10 px-8 py-0" style={{ lineHeight: 0.9 }}>
           <div
@@ -68,7 +68,7 @@ export const HomeIntroModule = (props: Props) => {
         </div>
       </div>
 
-      <div className="px-8 py-16 text-white lg:flex">
+      <div className="max-768:flex-col flex gap-6 px-8 py-16 text-white">
         <div className="flex w-3/6 items-start justify-start">
           <div className="circle ">
             <Image
@@ -80,14 +80,14 @@ export const HomeIntroModule = (props: Props) => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 sm:w-full lg:w-3/6" style={{}}>
+        <div className="max-768:w-full flex flex-col gap-6 lg:w-3/6" style={{}}>
           <div className="info-text about-text">{props.aboutInfo}</div>
 
           <div className="title-text about-title-text">{props.aboutTitle}</div>
 
           <div className="desc-text mt-8 lg:pl-10">{props.aboutDesc}</div>
 
-          <Link href="/" className="desc-text lg:pl-10 underline">
+          <Link href="/" className="desc-text underline lg:pl-10">
             Read More
           </Link>
         </div>

@@ -58,7 +58,7 @@
   animation: rotateCircle 30s linear infinite;
 }
 
-.about-text{
+.about-text {
   color: var(--primary) !important;
   font-size: 1.2rem !important;
   font-weight: normal;
@@ -79,18 +79,18 @@
   }
 
   .intro-design-text {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .hero {
-    margin-top: -40px;
+    margin-top: -20px;
   }
 
   .hero-image-container {
-    height: 10rem;
+    height: 14rem;
   }
 
-  .about-title-text{
+  .about-title-text {
     font-size: 28px !important;
     line-height: 1.3;
   }

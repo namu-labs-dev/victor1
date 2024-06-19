@@ -3,6 +3,15 @@
   --gray-opacity: rgba(255, 255, 255, 0.25);
 }
 
+.pricing-design-text {
+  font-size: 10rem;
+}
+
+.pricing-info-text {
+  color: var(--primary) !important;
+  font-size: 1.2rem !important;
+}
+
 .pricing-card:last-child {
   background-image: url("../../../../../public/pngs/pricing-plan-bg.png");
   background-color: rgb(10, 16, 25);
@@ -96,4 +105,19 @@
 
 .button:hover .arrow-button-link {
   color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .pricing-design-text {
+    font-size: 4rem;
+  }
+
+  .pricing-title-text {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .pricing-card {
+    height: auto !important;
+  }
 }
