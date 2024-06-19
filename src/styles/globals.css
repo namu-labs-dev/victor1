@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary: rgb(85, 230, 165);
+}
+
+.title-text {
+  font-family: var(--font-inter);
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1;
+  color: white;
+}
+
+.desc-text {
+  font-family: var(--font-inter);
+  font-size: 1.1rem;
+  /* --tw-text-opacity: 0.75; */
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.info-text {
+  font-family: var(--font-inter);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary);
+}

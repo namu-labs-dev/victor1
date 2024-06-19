@@ -1,6 +1,7 @@
 import { HomeContentModule } from "~/components/Modules/Home/HomeContentModule";
-  import { Layout } from "antd";
-import { Content, Footer, Header } from "antd/es/layout/layout";
+import { Layout } from "antd";
+import { Content, Header } from "antd/es/layout/layout";
+import { HeaderModule } from "~/components/Modules/Header/HeaderModule";
 
 type Props = {
   homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
@@ -9,22 +10,19 @@ type Props = {
 export const HomeTemplate = (props: Props) => {
   return (
     <Layout style={{ height: "100%" }}>
-    {/*
-    <Header style={{ padding: 0, height: 50 }}>
-    place for header module
-    </Header>
-    */}
+      <Header className="flex h-20 w-full items-center px-8">
+        <HeaderModule />
+      </Header>
 
-    <Content style={{ overflow: "auto" }}>
-           <HomeContentModule {...props.homeContentModuleProps}  />
-    </Content>
+      <Content style={{ overflow: "auto" }} className="">
+        <HomeContentModule {...props.homeContentModuleProps} />
+      </Content>
 
-    {/*
+      {/*
     <Footer style={{ padding: 0, minHeight: 50 }}>
     place for footer module
     </Footer>
     */}
-  </Layout>
+    </Layout>
   );
 };
-  

@@ -1,0 +1,88 @@
+:root {
+  --primary: rgb(85, 230, 165);
+  --opacity-gray: rgba(255, 255, 255, 0.25);
+}
+
+.recent-info-text {
+  color: var(--primary) !important;
+  font-size: 1.2rem !important;
+}
+
+.more-projects {
+  background-color: transparent;
+  border: 1px solid var(--opacity-gray);
+  width: 250px;
+  height: 60px;
+  transition: all 0.5s ease-in;
+}
+
+.more-projects:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.more-project-text {
+  font-size: 1rem !important;
+}
+
+.more {
+  transition: all 1s ease-in;
+}
+
+.more-projects:hover .more {
+  color: black;
+}
+
+.more-projects:hover .more-arrow-link {
+  color: black;
+}
+
+.more-arrow-link {
+  position: relative;
+  transition: all 1s ease-in;
+}
+
+.project-container {
+  border-bottom: 1px solid var(--opacity-gray);
+  transition: all 0.5s ease-in;
+}
+
+.project-container:hover {
+  border-bottom: 1px solid var(--primary);
+}
+
+.arrow-container {
+  background-color: transparent;
+  border: 1px solid var(--opacity-gray);
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in;
+}
+
+.info-text {
+  transition: all 0.5s ease-in;
+}
+
+.project-container:hover .arrow-container {
+  background-color: var(--primary);
+}
+
+.project-container:hover .info-text {
+  text-decoration: underline;
+  color: var(--primary) !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .recent-title-text {
+    font-size: 2rem !important;
+  }
+
+  .more-projects {
+    width: 250px;
+    margin-top: 20px;
+  }
+}

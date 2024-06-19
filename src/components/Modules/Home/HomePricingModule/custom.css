@@ -1,0 +1,99 @@
+:root {
+  --primary: rgb(85, 230, 165);
+  --gray-opacity: rgba(255, 255, 255, 0.25);
+}
+
+.pricing-card:last-child {
+  background-image: url("../../../../../public/pngs/pricing-plan-bg.png");
+  background-color: rgb(10, 16, 25);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  padding: 40px;
+}
+
+.pricing-card:nth-child(2) {
+  background-image: url("../../../../../public/pngs/pricing-plan-bg.png");
+  background-color: rgb(10, 16, 25);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  padding: 40px;
+}
+
+.pricing-card:first-child {
+  background-image: url("../../../../../public/jpgs/pricing-banner-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120vh;
+  padding: 40px;
+}
+
+.info-text {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.join-text {
+  font-size: 1rem;
+}
+
+.arrow-container {
+  height: 45px;
+  width: 45px;
+}
+
+.arrow-link {
+  color: white;
+}
+
+.icon-container {
+  background-color: var(--primary);
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.package-title {
+  font-size: 1.4rem;
+}
+
+.plan-det {
+  color: white;
+}
+
+.title-text span {
+  font-size: 1rem;
+}
+
+.button {
+  border: 1px solid var(--gray-opacity);
+  background-color: transparent;
+  transition: all 0.5s ease-in;
+}
+
+.button:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.button:hover .btn-text {
+  color: black;
+}
+
+.arrow-button-link {
+  color: white;
+  transition: all 0.5s ease-in;
+}
+
+.button:hover .arrow-button-link {
+  color: black;
+}

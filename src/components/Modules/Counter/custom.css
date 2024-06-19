@@ -1,0 +1,13 @@
+:root {
+  --primary: rgb(85, 230, 165);
+}
+
+.counter-number {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.25);
+  transition: all 0.5s ease-in;
+}
+
+.counter-container:hover .counter-number {
+  color: var(--primary);
+}
