@@ -1,0 +1,39 @@
+:root {
+  --primary: rgb(85, 230, 165);
+  --gray-opacity: rgba(255, 255, 255, 0.25);
+}
+
+.choose-info-text {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.choice-info-text {
+  font-size: 1.4rem;
+}
+
+.choice-check-container {
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.choice-check-icon {
+  color: white;
+}
+
+.choice-line-container {
+  background: linear-gradient(to bottom, var(--primary), black);
+  width: 3px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .choose-title-text {
+    font-size: 2rem !important;
+    text-align: left;
+  }
+}

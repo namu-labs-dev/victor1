@@ -4,3 +4,4 @@ export { default as react } from "./react.svg";
 export { default as wordpress } from "./wordpress.svg";
 export { default as price } from "./price.svg";
 export { default as pricing_hand } from "./pricing-hand.svg";
+export { default as toggler } from "./toggler.svg";

@@ -2,16 +2,17 @@ import { HomeContentModule } from "~/components/Modules/Home/HomeContentModule";
 import { Layout } from "antd";
 import { Content, Header } from "antd/es/layout/layout";
 import { HeaderModule } from "~/components/Modules/Header/HeaderModule";
+import './custom.css'
 
 type Props = {
-  homeHeaderModuleProps: React.ComponentProps<typeof HeaderModule>
+  homeHeaderModuleProps: React.ComponentProps<typeof HeaderModule>;
   homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
 };
 
 export const HomeTemplate = (props: Props) => {
   return (
     <Layout style={{ height: "100%" }}>
-      <Header className="flex h-20 w-full items-center px-8 bg-transparent">
+      <Header className="flex h-20 w-full items-center px-8 header">
         <HeaderModule {...props.homeHeaderModuleProps} />
       </Header>
 

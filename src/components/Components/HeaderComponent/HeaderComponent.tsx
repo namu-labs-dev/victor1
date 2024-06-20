@@ -1,7 +1,21 @@
+import { HeaderAtom } from "~/components/Atoms/HeaderAtom/HeaderAtom";
+
+type Links = {
+  id: number;
+  title: string;
+  url: string;
+};
+
 type Props = {
-      // Add props here
-    };
+  links: Links[];
+};
 
 export const HeaderComponent = (props: Props) => {
-  return (<div>HeaderComponent</div>);
+  return (
+    <>
+      {props.links.map((item) => (
+        <HeaderAtom key={item.id} item={item} />
+      ))}
+    </>
+  );
 };

@@ -68,7 +68,7 @@ export const HomeIntroModule = (props: Props) => {
         </div>
       </div>
 
-      <div className="max-768:flex-col flex gap-6 px-8 py-16 text-white">
+      <div className="flex gap-6 px-8 py-16 text-white max-768:flex-col">
         <div className="flex w-3/6 items-start justify-start">
           <div className="circle ">
             <Image
@@ -80,7 +80,7 @@ export const HomeIntroModule = (props: Props) => {
           </div>
         </div>
 
-        <div className="max-768:w-full flex flex-col gap-6 lg:w-3/6" style={{}}>
+        <div className="flex flex-col gap-6 lg:w-3/6 max-768:w-full" style={{}}>
           <div className="info-text about-text">{props.aboutInfo}</div>
 
           <div className="title-text about-title-text">{props.aboutTitle}</div>

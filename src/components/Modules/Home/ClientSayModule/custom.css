@@ -1,0 +1,62 @@
+:root {
+  --primary: rgb(85, 230, 165);
+  --gray-opacity: rgba(255, 255, 255, 0.25);
+}
+
+.star-icon {
+  color: var(--primary);
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--gray-opacity);
+  position: relative;
+  margin: 60px 0;
+}
+
+.quote-icon-contain {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border: 1px solid var(--gray-opacity);
+  background-color: black;
+  z-index: 9;
+  top: -28px;
+  left: 40px;
+}
+
+.testimony-text {
+  font-size: 2.2rem;
+}
+
+.author-name {
+  font-size: 1.5rem;
+}
+
+.author-role {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .testimony-text {
+    font-size: 1.3rem !important;
+    text-align: left;
+  }
+
+  .horizontal-line {
+    margin: 30px 0;
+  }
+
+  .author-name {
+    font-size: 1.2rem;
+  }
+
+  .author-role {
+    font-size: 0.8rem;
+  }
+}

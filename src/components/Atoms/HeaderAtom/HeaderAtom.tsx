@@ -1,7 +1,13 @@
+import Link from "next/link";
+
 type Props = {
-      // Add props here
-    };
+  item: {
+    id: number;
+    title: string;
+    url: string;
+  };
+};
 
 export const HeaderAtom = (props: Props) => {
-  return (<div>HeaderAtom</div>);
+  return <Link href={props.item.url} className="info-text navLinks">{props.item.title}</Link>;
 };

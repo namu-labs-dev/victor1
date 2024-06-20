@@ -1,4 +1,6 @@
 import { HomeTemplate } from "~/components/Templates/Home/HomeTemplate";
+import { chooseUsStore } from "~/stores/ChooseUsStore/ChooseUsStore";
+import { clientSayStore } from "~/stores/ClientSayStore/ClientSayStore";
 import { counterStore } from "~/stores/CounterStore/CounterStore";
 import { headerStore } from "~/stores/HeaderStore/HeaderStore";
 import { homeIntroStore } from "~/stores/HomeIntroStore/HomeIntroStore";
@@ -22,6 +24,8 @@ export const HomeContainer = () => {
       recentWorkContentProps: recentWorkStore,
       teamContentProps: teamMemberStore,
       pricingContentProps: homePricingStore,
+      chooseContentProps: chooseUsStore,
+      clientSayContentProps: clientSayStore,
     },
   };
 

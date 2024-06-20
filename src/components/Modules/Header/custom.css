@@ -1,0 +1,45 @@
+:root {
+  --primary: rgb(85, 230, 165);
+  --gray-opacity: rgba(255, 255, 255, 0.25);
+}
+
+.navbar-container {
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 1);
+  padding: 10px 32px;
+}
+
+.navLinks {
+  font-size: 1.1rem !important;
+  transition: all 0.5s ease-in;
+}
+
+.navLinks:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.util-icon-container {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .navLinks {
+    border-bottom: 1px solid var(--gray-opacity);
+  }
+}
