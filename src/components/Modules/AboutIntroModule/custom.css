@@ -1,0 +1,43 @@
+:root {
+  --primary: rgb(85, 230, 165);
+  --gray-opacity: rgba(255, 255, 255, 0.25);
+}
+
+.about-intro-text {
+  font-size: 8rem;
+}
+
+.rotating-border {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 30px solid var(--primary);
+  border-bottom: none;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  animation: rotate 5s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about-intro-text {
+    font-size: 2rem;
+  }
+
+  .rotating-border {
+    width: 40px;
+    height: 40px;
+    border: 10px solid var(--primary);
+    border-bottom: none;
+  }
+}
