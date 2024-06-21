@@ -1,0 +1,87 @@
+:root {
+  --primary: rgb(85, 230, 165);
+  --gray-opacity: rgba(255, 255, 255, 0.25);
+}
+
+.footer-icon-text {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.footer-horizontal-line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--gray-opacity);
+}
+
+.footer-work-text {
+  font-size: 3.4rem;
+}
+
+.footer-contact-link {
+  border: 1px solid var(--gray-opacity);
+  padding: 12px 40px;
+  border-radius: 30px;
+  background-color: transparent;
+  transition: all 0.5s ease-in;
+}
+
+.footer-contact-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: all 0.5s ease-in;
+}
+
+.footer-arrow-icon {
+  transition: all 0.5s ease-in;
+}
+
+.footer-contact-link:last-child {
+  background-color: var(--primary);
+}
+
+.footer-contact-link:last-child .footer-contact-text {
+  color: black;
+}
+
+.footer-contact-link:last-child .footer-arrow-icon {
+  color: black;
+}
+
+.footer-contact-link:last-child:hover {
+  background-color: transparent;
+}
+
+.footer-contact-link:last-child:hover .footer-contact-text {
+  color: white;
+}
+
+.footer-contact-link:last-child:hover .footer-arrow-icon {
+  color: white;
+}
+
+.footer-contact-link:first-child:hover {
+  background-color: var(--primary);
+}
+
+.footer-contact-link:first-child:hover .footer-contact-text {
+  color: black;
+}
+
+.footer-contact-link:first-child:hover .footer-arrow-icon {
+  color: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-work-text {
+    font-size: 2rem;
+  }
+
+  .footer-contact-link{
+    padding: 8px;
+  }
+
+  .quick-link-text{
+    font-size: 1.4rem;
+  }
+}

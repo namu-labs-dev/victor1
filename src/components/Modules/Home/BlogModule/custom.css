@@ -1,0 +1,33 @@
+:root {
+  --primary: rgb(85, 230, 165);
+  --gray-opacity: rgba(255, 255, 255, 0.25);
+}
+
+.blog-info-text {
+  color: var(--primary) !important;
+  font-size: 1.2rem;
+}
+
+.blog-horizontal-line {
+  height: 1px;
+  width: auto;
+  background-color: var(--gray-opacity);
+}
+
+.blog-read-more {
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.blog-arrow-icon {
+  color: var(--primary);
+}
+
+.blog-item-title-text {
+  font-size: 1.4rem !important;
+}
+
+.blog-item-title-text:hover {
+  color: white;
+  text-decoration: underline;
+}

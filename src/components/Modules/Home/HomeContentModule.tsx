@@ -7,6 +7,7 @@ import { TeamModule } from "../Team/TeamModule";
 import { HomePricingModule } from "./HomePricingModule/HomePricingModule";
 import { ChooseUsModule } from "./ChooseUsModule/ChooseUsModule";
 import { ClientSayModule } from "./ClientSayModule/ClientSayModule";
+import { BlogModule } from "./BlogModule/BlogModule";
 
 type Props = {
   introContentProps: React.ComponentProps<typeof HomeIntroModule>;
@@ -18,6 +19,7 @@ type Props = {
   pricingContentProps: React.ComponentProps<typeof HomePricingModule>;
   chooseContentProps: React.ComponentProps<typeof ChooseUsModule>;
   clientSayContentProps: React.ComponentProps<typeof ClientSayModule>;
+  blogContentProps: React.ComponentProps<typeof BlogModule>;
 };
 
 export const HomeContentModule = (props: Props) => {
@@ -32,6 +34,7 @@ export const HomeContentModule = (props: Props) => {
       <HomePricingModule {...props.pricingContentProps} />
       <ChooseUsModule {...props.chooseContentProps} />
       <ClientSayModule {...props.clientSayContentProps} />
+      <BlogModule {...props.blogContentProps} />
     </div>
   );
 };

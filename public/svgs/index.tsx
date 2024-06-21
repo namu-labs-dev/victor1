@@ -5,3 +5,7 @@ export { default as wordpress } from "./wordpress.svg";
 export { default as price } from "./price.svg";
 export { default as pricing_hand } from "./pricing-hand.svg";
 export { default as toggler } from "./toggler.svg";
+export { default as behance } from "./behance.svg";
+export { default as dribble } from "./dribble.svg";
+export { default as facebook } from "./facebook.svg";
+export { default as twitter } from "./twitter.svg";

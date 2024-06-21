@@ -1,30 +1,30 @@
 import { HomeContentModule } from "~/components/Modules/Home/HomeContentModule";
 import { Layout } from "antd";
-import { Content, Header } from "antd/es/layout/layout";
+import { Content, Footer, Header } from "antd/es/layout/layout";
 import { HeaderModule } from "~/components/Modules/Header/HeaderModule";
-import './custom.css'
+import "./custom.css";
+import { FooterModule } from "~/components/Modules/Footer/FooterModule";
 
 type Props = {
   homeHeaderModuleProps: React.ComponentProps<typeof HeaderModule>;
   homeContentModuleProps: React.ComponentProps<typeof HomeContentModule>;
+  homeFooterModuleProps: React.ComponentProps<typeof FooterModule>;
 };
 
 export const HomeTemplate = (props: Props) => {
   return (
     <Layout style={{ height: "100%" }}>
-      <Header className="flex h-20 w-full items-center px-8 header">
+      <Header className='header flex h-20 w-full items-center px-8'>
         <HeaderModule {...props.homeHeaderModuleProps} />
       </Header>
 
-      <Content style={{ overflow: "auto" }} className="">
+      <Content style={{ overflow: "auto" }} className=''>
         <HomeContentModule {...props.homeContentModuleProps} />
       </Content>
 
-      {/*
-    <Footer style={{ padding: 0, minHeight: 50 }}>
-    place for footer module
-    </Footer>
-    */}
+      <Footer className='footer px-8 py-16'>
+        <FooterModule {...props.homeFooterModuleProps} />
+      </Footer>
     </Layout>
   );
 };

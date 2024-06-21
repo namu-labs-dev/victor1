@@ -27,3 +27,22 @@
   font-weight: 600;
   color: var(--primary);
 }
+
+.header {
+  background: linear-gradient(to left, #0f2a1e, black, black);
+  animation: pulse 6s infinite;
+}
+
+.footer {
+  background-color: rgb(10, 16, 25);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    background: linear-gradient(to left, black, black, black);
+  }
+  50% {
+    background: linear-gradient(to left, #0f2a1e, black, black);
+  }
+}
