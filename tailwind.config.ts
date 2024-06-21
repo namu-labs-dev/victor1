@@ -11,6 +11,8 @@ export default {
       screens: {
         "max-480": { max: "480px" },
         "max-768": { max: "768px" },
+        "max-920": { max: "920px" },
+        "min-920": { max: "920px" },
         "min-320": { min: "320px" },
       },
     },

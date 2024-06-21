@@ -3,8 +3,8 @@ import "./custom.css";
 
 export const AboutIntroModule = () => {
   return (
-    <div className='flex flex-col bg-black p-8'>
-      <div className='flex w-[100%] flex-wrap items-start gap-0 max-768:my-0 max-768:w-full max-768:flex-col'>
+    <div className='flex flex-col bg-black p-8 gap-4'>
+      <div className='flex w-[100%] flex-wrap items-start gap-2 max-768:my-0 max-768:w-full max-768:flex-col'>
         <div className='title-text about-intro-text'>We’re Digital</div>
 
         <div className='flex flex-wrap items-center'>

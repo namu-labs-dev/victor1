@@ -35,7 +35,7 @@ type Props = {
 export const FooterComponent = (props: Props) => {
   return (
     <div className='flex flex-col gap-16'>
-      <div className='flex items-center justify-between max-768:flex-col max-768:items-start max-768:gap-6'>
+      <div className='flex flex-wrap items-center justify-between max-768:flex-col max-768:items-start max-768:gap-6'>
         {/* <Image src='/pngs/logo.png' alt="" fill /> */}
         <LogoAtom />
 
@@ -44,7 +44,7 @@ export const FooterComponent = (props: Props) => {
 
       <div className='footer-horizontal-line'></div>
 
-      <div className='flex items-start justify-between max-768:flex-col max-768:gap-16'>
+      <div className='flex flex-wrap items-start justify-between max-768:flex-col max-768:gap-16'>
         <div className='flex w-4/6 flex-col max-768:w-full'>
           <div className='flex gap-4'>
             <div className='h20 relative w-20 max-768:w-12'>
@@ -61,7 +61,7 @@ export const FooterComponent = (props: Props) => {
 
           <div className='info-text footer-work-text'>Together</div>
 
-          <div className='mt-12 flex gap-6 max-768:flex-col'>
+          <div className='mt-12 flex flex-wrap gap-6 max-768:flex-col'>
             <Link
               href='/'
               className='footer-contact-link flex items-center justify-center gap-2'
