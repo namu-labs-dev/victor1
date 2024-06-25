@@ -17,7 +17,6 @@ export const HeaderModule = (props: Props) => {
     const handleScroll = () => {
       const offset = window.scrollY;
       if (offset > 200) {
-        // Adjust this value based on when you want the navbar to become sticky
         setIsSticky(true);
       } else {
         setIsSticky(false);
@@ -35,7 +34,7 @@ export const HeaderModule = (props: Props) => {
     <div
       className={`navbar-container relative flex w-full items-center justify-between ${isSticky ? "sticky" : ""}`}
     >
-      <LogoAtom />
+      <LogoAtom width={150} height={100} />
 
       {menuOpen && (
         <div className='absolute top-20 z-50 hidden h-auto w-full flex-col bg-neutral-800 p-6 py-2 max-920:flex'>

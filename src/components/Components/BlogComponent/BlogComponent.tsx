@@ -1,23 +1,14 @@
 import { BlogAtom } from "~/components/Atoms/BlogAtom/BlogAtom";
 
-type Blogs = {
-  id: number;
-  title: string;
-  url: string;
-  date: string;
-  comment: string;
-  img: string;
-};
+type Props = React.ComponentProps<typeof BlogAtom>;
 
-type Props = {
-  blogs: Blogs[];
-};
+export const BlogComponent = (props: Props[]) => {
+  const blogs = Object.values(props);
 
-export const BlogComponent = (props: Props) => {
   return (
     <>
-      {props.blogs.map((item) => (
-        <BlogAtom key={item.id} item={item} />
+      {blogs.map((item, index) => (
+        <BlogAtom key={index} {...item} />
       ))}
     </>
   );

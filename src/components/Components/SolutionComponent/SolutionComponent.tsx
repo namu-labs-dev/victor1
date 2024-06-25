@@ -1,21 +1,14 @@
 import { SolutionAtom } from "~/components/Atoms/SolutionAtom/SolutionAtom";
 
-type Solutions = {
-  id: number;
-  title: string;
-  desc: string;
-  url: string;
-};
-
-type Props = {
-  solutions: Solutions[];
-};
+type Props = React.ComponentProps<typeof SolutionAtom>[];
 
 export const SolutionComponent = (props: Props) => {
+  const solutions = Object.values(props);
+
   return (
     <>
-      {props.solutions.map((item) => (
-        <SolutionAtom key={item.id} item={item} />
+      {solutions.map((item) => (
+        <SolutionAtom key={item.id} {...item} />
       ))}
     </>
   );

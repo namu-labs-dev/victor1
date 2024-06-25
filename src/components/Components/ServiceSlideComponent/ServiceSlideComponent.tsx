@@ -1,19 +1,14 @@
 import { ServiceSlideAtom } from "~/components/Atoms/ServiceSlideAtom/ServiceSlideAtom";
 
-type Slide = {
-  id: number;
-  title: string;
-};
-
-type Props = {
-  slide: Slide[];
-};
+type Props = React.ComponentProps<typeof ServiceSlideAtom>[];
 
 export const ServiceSlideComponent = (props: Props) => {
+  const slide = Object.values(props);
+
   return (
     <>
-      {props.slide.map((item) => (
-        <ServiceSlideAtom key={item.id} item={item} />
+      {slide.map((item) => (
+        <ServiceSlideAtom key={item.id} {...item} />
       ))}
     </>
   );

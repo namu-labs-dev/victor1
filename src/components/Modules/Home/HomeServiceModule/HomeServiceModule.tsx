@@ -6,18 +6,10 @@ import AnimatedComponent from "~/components/Components/AnimatedComponent/Animate
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-type Services = {
-  id: number;
-  title: string;
-  desc: string;
-  icon: string;
-  url: string;
-};
-
 type Props = {
   serviceInfo: string;
   serviceTitle: string;
-  services: Services[];
+  services: React.ComponentProps<typeof ServiceComponent>;
 };
 
 export const HomeServiceModule = (props: Props) => {
@@ -32,9 +24,9 @@ export const HomeServiceModule = (props: Props) => {
         </div>
       </AnimatedComponent>
 
-      <AnimatedComponent direction="bottom">
+      <AnimatedComponent direction='bottom'>
         <div className='mt-8 flex w-full flex-col flex-wrap items-center justify-center gap-4 md:flex-row lg:flex lg:flex-row'>
-          <ServiceComponent services={props.services} />
+          <ServiceComponent {...props.services} />
         </div>
       </AnimatedComponent>
 

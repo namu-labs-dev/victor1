@@ -4,10 +4,8 @@ import SVGAtom from "../SVGAtom/SVGAtom";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 type Props = {
-  item: {
-    id: number;
-    title: string;
-  };
+  id: number;
+  title: string;
 };
 
 export const ServiceSlideAtom = (props: Props) => {
@@ -16,7 +14,7 @@ export const ServiceSlideAtom = (props: Props) => {
       <div
         className={`${inter.variable} service-design-text text-[2rem] font-black text-black md:text-[4rem]`}
       >
-        {props.item.title}
+        {props.title}
       </div>
 
       <SVGAtom iconName='star' color='black' width={60} height={60} />

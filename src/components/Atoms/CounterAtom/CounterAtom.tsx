@@ -7,7 +7,9 @@ import { COLORS } from "~/constants/colors";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 type Props = {
-  item: { id: number; title: string; no: string };
+  id: number;
+  title: string;
+  no: string;
 };
 
 export const CounterAtom = (props: Props) => {
@@ -22,17 +24,17 @@ export const CounterAtom = (props: Props) => {
     if (inView) {
       let start = 0;
       const duration = 2000; // Duration of the counter animation in milliseconds
-      const stepTime = Math.abs(Math.floor(duration / parseInt(props.item.no)));
+      const stepTime = Math.abs(Math.floor(duration / parseInt(props.no)));
       const timer = setInterval(() => {
         start += 1;
         setCount(start);
-        if (start >= parseInt(props.item.no)) {
+        if (start >= parseInt(props.no)) {
           clearInterval(timer);
         }
       }, stepTime);
       return () => clearInterval(timer);
     }
-  }, [inView, props.item.no]);
+  }, [inView, props.no]);
 
   return (
     <div className='counter-container mt-6 flex flex-col gap-4 sm:mt-0'>
@@ -45,10 +47,10 @@ export const CounterAtom = (props: Props) => {
         ref={ref}
         className={`${inter.className} counter-number text-6xl font-black text-transparent sm:text-7xl md:text-9xl`}
       >
-        {props.item.title === "Project’s Complete" ? `${count}K` : count}
+        {props.title === "Project’s Complete" ? `${count}K` : count}
       </div>
 
-      <div className='desc-text max-480:w-3/4'>{props.item.title}</div>
+      <div className='desc-text max-480:w-3/4'>{props.title}</div>
     </div>
   );
 };

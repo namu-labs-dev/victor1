@@ -1,14 +1,9 @@
 import AnimatedComponent from "~/components/Components/AnimatedComponent/AnimatedComponent";
 import { GlobalClientComponent } from "~/components/Components/GlobalClientComponent/GlobalClientComponent";
 
-type Clients = {
-  id: number;
-  img: string;
-};
-
 type Props = {
   clientTitle: string;
-  clients: Clients[];
+  clients: React.ComponentProps<typeof GlobalClientComponent>;
 };
 
 export const GlobalClientModule = (props: Props) => {
@@ -25,7 +20,7 @@ export const GlobalClientModule = (props: Props) => {
       <div className='w-full'>
         <AnimatedComponent direction='bottom'>
           <div className='flex w-full flex-wrap justify-between gap-10'>
-            <GlobalClientComponent clients={props.clients} />
+            <GlobalClientComponent {...props.clients} />
           </div>
         </AnimatedComponent>
       </div>

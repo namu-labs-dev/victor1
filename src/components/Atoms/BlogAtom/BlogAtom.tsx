@@ -7,14 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
-  item: {
-    id: number;
-    title: string;
-    url: string;
-    date: string;
-    comment: string;
-    img: string;
-  };
+  id: number;
+  title: string;
+  url: string;
+  date: string;
+  comment: string;
+  img: string;
 };
 
 export const BlogAtom = (props: Props) => {
@@ -23,7 +21,7 @@ export const BlogAtom = (props: Props) => {
       <div className='relative h-72 w-auto max-768:h-56'>
         <Image
           fill
-          src={props.item.img}
+          src={props.img}
           alt='blogImg'
           className='h-full w-full object-cover'
         />
@@ -33,24 +31,26 @@ export const BlogAtom = (props: Props) => {
         <div className='flex items-center gap-2'>
           <CalendarOutlined className='text-lg text-white' />
 
-          <div className='desc-text max-768:text-sm'>{props.item.date}</div>
+          <div className='desc-text max-768:text-sm'>{props.date}</div>
         </div>
 
         <div className='h-2 w-2 rounded-full bg-white'></div>
 
         <div className='flex items-center gap-2'>
           <WechatOutlined className='text-lg text-white' />
-          <div className='desc-text max-768:text-sm'>COMMENT ({props.item.comment})</div>
+          <div className='desc-text max-768:text-sm'>
+            COMMENT ({props.comment})
+          </div>
         </div>
       </div>
 
       <div className='blog-horizontal-line'></div>
 
-      <Link href={props.item.url} className='info-text blog-item-title-text'>
-        {props.item.title}
+      <Link href={props.url} className='info-text blog-item-title-text'>
+        {props.title}
       </Link>
 
-      <Link href={props.item.url} className='flex items-center gap-4'>
+      <Link href={props.url} className='flex items-center gap-4'>
         <div className='info-text blog-read-more'>Read More</div>
 
         <ArrowUpOutlined

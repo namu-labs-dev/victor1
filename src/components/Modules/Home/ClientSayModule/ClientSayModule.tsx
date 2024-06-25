@@ -8,16 +8,8 @@ import AnimatedComponent from "~/components/Components/AnimatedComponent/Animate
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-type Testimonies = {
-  id: number;
-  desc: string;
-  author: string;
-  role: string;
-  star: string[];
-};
-
 type Props = {
-  testimonies: Testimonies[];
+  testimonies: React.ComponentProps<typeof ClientSayAtom>[];
 };
 
 export const ClientSayModule = (props: Props) => {
@@ -39,11 +31,11 @@ export const ClientSayModule = (props: Props) => {
       </Marquee>
 
       <AnimatedComponent direction='bottom'>
-        <div className='md:px-30 flex flex-col items-center gap-8 p-8 mt-16 sm:px-20 lg:h-[800px] lg:flex-row lg:p-8'>
+        <div className='md:px-30 mt-16 flex flex-col items-center gap-8 p-0 sm:px-20 lg:h-[800px] lg:flex-row lg:p-0'>
           <div className='w-full lg:w-1/2'>
             <CarouselComponent slides={props.testimonies}>
-              {props.testimonies.map((item, index) => (
-                <ClientSayAtom key={item.id} item={item} index={index} />
+              {props.testimonies.map((item) => (
+                <ClientSayAtom key={item.id} {...item} />
               ))}
             </CarouselComponent>
           </div>

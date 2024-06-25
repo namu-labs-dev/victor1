@@ -1,18 +1,15 @@
 import { GlobalClientAtom } from "~/components/Atoms/GlobalClientAtom/GlobalClientAtom";
 
-type Clients = {
-  id: number;
-  img: string;
-};
-
-type Props = {
-  clients: Clients[];
-};
+type Props = React.ComponentProps<typeof GlobalClientAtom>[];
 
 export const GlobalClientComponent = (props: Props) => {
-  return (<>
-  {props.clients.map(item=>(
-    <GlobalClientAtom key={item.id} item={item} />
-  ))}
-  </>);
+  const clients = Object.values(props);
+
+  return (
+    <>
+      {clients.map((item) => (
+        <GlobalClientAtom key={item.id} {...item} />
+      ))}
+    </>
+  );
 };

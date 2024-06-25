@@ -2,18 +2,10 @@ import AnimatedComponent from "~/components/Components/AnimatedComponent/Animate
 import "./custom.css";
 import { TeamComponent } from "~/components/Components/TeamComponent/TeamComponent";
 
-type TeamMembers = {
-  id: number;
-  img: string;
-  name: string;
-  role: string;
-  url: string;
-};
-
 type Props = {
   teamInfo: string;
   teamTitle: string;
-  team: TeamMembers[];
+  team: React.ComponentProps<typeof TeamComponent>;
 };
 
 export const TeamModule = (props: Props) => {
@@ -28,7 +20,7 @@ export const TeamModule = (props: Props) => {
 
       <AnimatedComponent direction='bottom'>
         <div className='mt-10 flex w-full flex-wrap justify-center gap-2'>
-          <TeamComponent team={props.team} />
+          <TeamComponent {...props.team} />
         </div>
       </AnimatedComponent>
     </div>

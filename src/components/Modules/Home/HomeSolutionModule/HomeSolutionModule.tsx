@@ -7,17 +7,10 @@ import AnimatedComponent from "~/components/Components/AnimatedComponent/Animate
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-type Solutions = {
-  id: number;
-  title: string;
-  desc: string;
-  url: string;
-};
-
 type Props = {
   solutionInfo: string;
   solutionTitle: string;
-  solutions: Solutions[];
+  solutions: React.ComponentProps<typeof SolutionComponent>;
 };
 
 export const HomeSolutionModule = (props: Props) => {
@@ -57,7 +50,7 @@ export const HomeSolutionModule = (props: Props) => {
                 {props.solutionTitle}
               </div>
 
-              <SolutionComponent solutions={props.solutions} />
+              <SolutionComponent {...props.solutions} />
             </div>
 
             <div className='lg:w-1/2 max-768:w-full'>

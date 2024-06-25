@@ -2,14 +2,11 @@ import Image from "next/image";
 import { RatingAtom } from "../RatingAtom/RatingAtom";
 
 type Props = {
-  item: {
-    id: number;
-    desc: string;
-    author: string;
-    role: string;
-    star: string[];
-  };
-  index: number;
+  id: number;
+  desc: string;
+  author: string;
+  role: string;
+  star: React.ComponentProps<typeof RatingAtom>[];
 };
 
 export const AboutTestimonialAtom = (props: Props) => {
@@ -19,7 +16,7 @@ export const AboutTestimonialAtom = (props: Props) => {
         className='text-[1.2rem] text-white lg:text-[1.6rem]'
         style={{ lineHeight: 1.7 }}
       >
-        {props.item.desc}
+        {props.desc}
       </div>
 
       <div className='flex flex-col justify-between gap-4 sm:flex-row'>
@@ -34,15 +31,13 @@ export const AboutTestimonialAtom = (props: Props) => {
           </div>
 
           <div className='flex flex-col gap-1'>
-            <div className='text-lg text-white lg:text-2xl'>
-              {props.item.author}
-            </div>
-            <div className='desc-text test-author-text'>{props.item.role}</div>
+            <div className='text-lg text-white lg:text-2xl'>{props.author}</div>
+            <div className='desc-text test-author-text'>{props.role}</div>
           </div>
         </div>
 
         <div className='flex items-center gap-2'>
-          {props.item.star.map((item, i) => (
+          {props.star.map((item, i) => (
             <RatingAtom key={i} />
           ))}
         </div>

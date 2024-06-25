@@ -9,13 +9,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
-  item: {
-    id: number;
-    img: string;
-    name: string;
-    role: string;
-    url: string;
-  };
+  id: number;
+  img: string;
+  name: string;
+  role: string;
+  url: string;
 };
 
 export const TeamAtom = (props: Props) => {
@@ -24,7 +22,7 @@ export const TeamAtom = (props: Props) => {
       <div className='relative h-[300px] w-[250px]'>
         <Image
           fill
-          src={props.item.img}
+          src={props.img}
           alt='member1'
           className='h-full w-full object-cover'
         />
@@ -33,7 +31,7 @@ export const TeamAtom = (props: Props) => {
       <div className='details-container'>
         <div className='team-name-container'>
           <div className='team-name flex w-full items-start justify-between'>
-            <div className='info-text member-name w-1/2'>{props.item.name}</div>
+            <div className='info-text member-name w-1/2'>{props.name}</div>
 
             <ArrowUpOutlined
               className='member-arrow-link cursor-pointer text-2xl text-white'
@@ -41,12 +39,12 @@ export const TeamAtom = (props: Props) => {
             />
           </div>
 
-          <div className='desc-text team-role'>{props.item.role}</div>
+          <div className='desc-text team-role'>{props.role}</div>
         </div>
 
         <div className='view-detail-container flex flex-col gap-4'>
           <div className='flex w-full gap-2'>
-            <Link href={props.item.url} className='info-text view-details'>
+            <Link href={props.url} className='info-text view-details'>
               View Details
             </Link>
 
@@ -57,19 +55,19 @@ export const TeamAtom = (props: Props) => {
           </div>
 
           <div className='flex gap-3'>
-            <Link href={props.item.url} className='social-icon'>
+            <Link href={props.url} className='social-icon'>
               <FacebookOutlined className='text-lg' />
             </Link>
 
-            <Link href={props.item.url} className='social-icon'>
+            <Link href={props.url} className='social-icon'>
               <TwitterOutlined className='text-lg' />
             </Link>
 
-            <Link href={props.item.url} className='social-icon'>
+            <Link href={props.url} className='social-icon'>
               <InstagramOutlined className='text-lg' />
             </Link>
 
-            <Link href={props.item.url} className='social-icon'>
+            <Link href={props.url} className='social-icon'>
               <LinkedinOutlined className='text-lg' />
             </Link>
           </div>

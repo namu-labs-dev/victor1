@@ -1,10 +1,8 @@
 import Image from "next/image";
 
 type Props = {
-  item: {
-    id: number;
-    img: string;
-  };
+  id: number;
+  img: string;
 };
 
 export const GlobalClientAtom = (props: Props) => {
@@ -12,7 +10,7 @@ export const GlobalClientAtom = (props: Props) => {
     <div className='relative h-[50px] w-[100px]'>
       <Image
         fill
-        src={props.item.img}
+        src={props.img}
         alt='client logo'
         className='h-full w-full object-contain'
       />

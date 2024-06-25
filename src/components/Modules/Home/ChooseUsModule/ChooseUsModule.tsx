@@ -3,16 +3,10 @@ import "./custom.css";
 import { ChooseUsComponent } from "~/components/Components/ChooseUsComponent/ChooseUsComponent";
 import AnimatedComponent from "~/components/Components/AnimatedComponent/AnimatedComponent";
 
-type Choices = {
-  id: number;
-  title: string;
-  desc: string;
-};
-
 type Props = {
   chooseInfo: string;
   chooseTitle: string;
-  choices: Choices[];
+  choices: React.ComponentProps<typeof ChooseUsComponent>;
 };
 
 export const ChooseUsModule = (props: Props) => {
@@ -37,7 +31,7 @@ export const ChooseUsModule = (props: Props) => {
 
             <div className='mt-8'>
               <div className='flex flex-col gap-6 max-768:items-center'>
-                <ChooseUsComponent choices={props.choices} />
+                <ChooseUsComponent {...props.choices} />
               </div>
             </div>
           </div>

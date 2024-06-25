@@ -7,15 +7,8 @@ import AnimatedComponent from "~/components/Components/AnimatedComponent/Animate
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-type NavLinks = {
-  id: number;
-  to: string;
-  title: string;
-  icon: string;
-};
-
 type Props = {
-  navLinks: NavLinks[];
+  navLinks: React.ComponentProps<typeof LinkListComponent>;
   aboutInfo: string;
   aboutTitle: string;
   aboutDesc: string;
@@ -70,7 +63,7 @@ export const HomeIntroModule = (props: Props) => {
           </div>
 
           <div className='flex h-[50%] w-2/12 flex-col items-center justify-between py-0 text-white md:h-[90%] lg:h-full lg:w-1/12 lg:items-end'>
-            <LinkListComponent navLinks={props.navLinks} />
+            <LinkListComponent {...props.navLinks} />
           </div>
         </div>
       </AnimatedComponent>

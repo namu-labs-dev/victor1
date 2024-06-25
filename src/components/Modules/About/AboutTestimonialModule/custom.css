@@ -1,0 +1,25 @@
+:root {
+  --primary: rgb(85, 230, 165);
+  --gray-opacity: rgba(255, 255, 255, 0.25);
+}
+
+.circular-border {
+  height: 300px;
+  width: 300px;
+  border: 50px solid var(--primary);
+  border-radius: 50%;
+}
+
+.star-icon {
+  color: var(--primary);
+}
+
+.test-arrow-icon:hover {
+  color: var(--primary);
+}
+
+@media only screen and (max-width: 768px) {
+  .test-author-text {
+    font-size: 1rem;
+  }
+}

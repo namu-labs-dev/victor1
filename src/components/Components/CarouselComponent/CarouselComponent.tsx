@@ -16,8 +16,6 @@ export const CarouselComponent = (props: Props) => {
     return () => clearInterval(interval);
   }, [props.slides.length]);
 
-  // console.log(currentIndex);
-
   return (
     <div className='relative w-full overflow-hidden'>
       <div
@@ -29,7 +27,7 @@ export const CarouselComponent = (props: Props) => {
 
       <div className='mt-10 flex w-full items-center gap-6'>
         <ArrowUpOutlined
-          className='testimony-arrow-icon hover:text-primary-color cursor-pointer text-2xl text-white duration-500 ease-in-out'
+          className='testimony-arrow-icon cursor-pointer text-2xl text-white duration-500 ease-in-out hover:text-primary-color'
           rotate={45}
         />
 
@@ -41,7 +39,7 @@ export const CarouselComponent = (props: Props) => {
         ))}
 
         <ArrowDownOutlined
-          className='testimony-arrow-icon hover:text-primary-color cursor-pointer text-2xl text-white duration-500 ease-in-out'
+          className='testimony-arrow-icon cursor-pointer text-2xl text-white duration-500 ease-in-out hover:text-primary-color'
           rotate={45}
         />
       </div>

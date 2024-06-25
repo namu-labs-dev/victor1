@@ -4,23 +4,16 @@ import { ArrowUpOutlined } from "@ant-design/icons";
 import { RecentWorkComponent } from "~/components/Components/RecentWorkComponent/RecentWorkComponent";
 import AnimatedComponent from "~/components/Components/AnimatedComponent/AnimatedComponent";
 
-type RecentWorks = {
-  id: number;
-  title: string;
-  img: string;
-  url: string;
-};
-
 type Props = {
   recentInfo: string;
   recentTitle: string;
   url: string;
-  recentWorks: RecentWorks[];
+  recentWorks: React.ComponentProps<typeof RecentWorkComponent>;
 };
 
 export const RecentWorkModule = (props: Props) => {
   return (
-    <div className='bg-black w-full py-16'>
+    <div className='w-full bg-black py-16'>
       <AnimatedComponent>
         <div className='flex w-full flex-col gap-16 bg-black p-8'>
           <div className='w-full items-center justify-between lg:flex'>
@@ -51,7 +44,7 @@ export const RecentWorkModule = (props: Props) => {
             </div>
           </div>
 
-          <RecentWorkComponent recentWorks={props.recentWorks} />
+          <RecentWorkComponent {...props.recentWorks} />
         </div>
       </AnimatedComponent>
     </div>

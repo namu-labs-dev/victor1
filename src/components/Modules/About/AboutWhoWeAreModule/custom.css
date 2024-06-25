@@ -1,0 +1,22 @@
+:root {
+  --primary: rgb(85, 230, 165);
+  --gray-opacity: rgba(255, 255, 255, 0.25);
+}
+
+.who-info-text {
+  color: white;
+}
+
+.who-divider {
+  background-color: var(--gray-opacity);
+}
+
+.who-container:hover .who-divider {
+  background-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .title-text {
+    font-size: 2rem;
+  }
+}

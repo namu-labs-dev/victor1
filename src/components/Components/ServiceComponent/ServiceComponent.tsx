@@ -1,22 +1,14 @@
 import { ServiceAtom } from "~/components/Atoms/ServiceAtom/ServiceAtom";
 
-type Services = {
-  id: number;
-  title: string;
-  desc: string;
-  icon: string;
-  url: string;
-};
-
-type Props = {
-  services: Services[];
-};
+type Props = React.ComponentProps<typeof ServiceAtom>[];
 
 export const ServiceComponent = (props: Props) => {
+  const services = Object.values(props);
+
   return (
     <>
-      {props.services.map((item) => (
-        <ServiceAtom key={item.id} item={item} />
+      {services.map((item) => (
+        <ServiceAtom key={item.id} {...item} />
       ))}
     </>
   );

@@ -1,22 +1,14 @@
 import { TeamAtom } from "~/components/Atoms/TeamAtom/TeamAtom";
 
-type TeamMembers = {
-  id: number;
-  img: string;
-  name: string;
-  role: string;
-  url: string;
-};
-
-type Props = {
-  team: TeamMembers[];
-};
+type Props = React.ComponentProps<typeof TeamAtom>[];
 
 export const TeamComponent = (props: Props) => {
+  const team = Object.values(props);
+
   return (
     <>
-      {props.team.map((item) => (
-        <TeamAtom key={item.id} item={item} />
+      {team.map((item) => (
+        <TeamAtom key={item.id} {...item} />
       ))}
     </>
   );
