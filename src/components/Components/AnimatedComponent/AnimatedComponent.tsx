@@ -1,11 +1,11 @@
-// components/AnimatedComponent.tsx
 import { useEffect, type ReactNode } from "react";
 import { useAnimation, motion, type Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 type AnimatedComponentProps = {
   children: ReactNode;
-  animation: Variants;
+  animation?: Variants;
+  direction?: "left" | "right" | "top" | "bottom";
 };
 
 const AnimatedComponent = (props: AnimatedComponentProps) => {
@@ -21,15 +21,42 @@ const AnimatedComponent = (props: AnimatedComponentProps) => {
     }
   }, [controls, inView]);
 
+  const getVariants = (direction: string | any): Variants => {
+    switch (direction) {
+      case "left":
+        return {
+          hidden: { opacity: 0, x: -100 },
+          visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+        };
+      case "right":
+        return {
+          hidden: { opacity: 0, x: 100 },
+          visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+        };
+      case "top":
+        return {
+          hidden: { opacity: 0, y: -100 },
+          visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+        };
+      case "bottom":
+        return {
+          hidden: { opacity: 0, y: 100 },
+          visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+        };
+      default:
+        return {
+          hidden: { opacity: 0, x: -100 },
+          visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+        };
+    }
+  };
+
   return (
     <motion.div
       ref={ref}
       initial='hidden'
       animate={controls}
-      variants={{
-        hidden: { opacity: 0, x: -100 },
-        visible: { opacity: 1, x: 0, transition: { duration: 1 } },
-      }}
+      variants={getVariants(props.direction)}
     >
       {props.children}
     </motion.div>

@@ -4,6 +4,7 @@ type NavLinks = {
   id: number;
   to: string;
   title: string;
+  icon: string
 };
 
 type Props = {

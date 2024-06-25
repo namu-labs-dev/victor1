@@ -18,18 +18,16 @@ export const HomeContainer = () => {
       headerProps: headerStore,
     },
 
-    homeContentModuleProps: {
-      introContentProps: homeIntroStore,
-      solutionContentProps: homeSolutionStore,
-      counterContentProps: counterStore,
-      serviceContentProps: homeServiceStore,
-      recentWorkContentProps: recentWorkStore,
-      teamContentProps: teamMemberStore,
-      pricingContentProps: homePricingStore,
-      chooseContentProps: chooseUsStore,
-      clientSayContentProps: clientSayStore,
-      blogContentProps: blogStore,
-    },
+    introContentProps: homeIntroStore,
+    solutionContentProps: homeSolutionStore,
+    counterContentProps: counterStore,
+    serviceContentProps: homeServiceStore,
+    recentWorkContentProps: recentWorkStore,
+    teamContentProps: teamMemberStore,
+    pricingContentProps: homePricingStore,
+    chooseContentProps: chooseUsStore,
+    clientSayContentProps: clientSayStore,
+    blogContentProps: blogStore,
 
     homeFooterModuleProps: {
       footerContentProps: footerStore,

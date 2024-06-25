@@ -31,7 +31,7 @@
 }
 
 .testimony-text {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
 }
 
 .author-name {
@@ -44,7 +44,7 @@
 
 @media only screen and (max-width: 768px) {
   .testimony-text {
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
     text-align: left;
   }
 

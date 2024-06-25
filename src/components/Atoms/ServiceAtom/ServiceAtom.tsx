@@ -8,27 +8,29 @@ type Props = {
 
 export const ServiceAtom = (props: Props) => {
   return (
-    <div className="service-card flex flex-col gap-8 p-6">
-      <div className="flex w-full justify-between">
+    <div className='service-card flex w-[100%] flex-col gap-8 p-4 sm:w-[80%] sm:p-6 md:w-[45%] lg:w-[24%]'>
+      <div className='flex w-full justify-between'>
         <div
-          className="info-text service-title cursor-pointer"
-          style={{ color: "white", width: "50%" }}
+          className='info-text service-title w-[75%]  cursor-pointer'
+          style={{ color: "white" }}
         >
           {props.item.title}
         </div>
 
-        <SVGAtom iconName={props.item.icon} height={100} width={60} />
+        <div className='w-[20%]'>
+          <SVGAtom iconName={props.item.icon} height={100} width={60} />
+        </div>
       </div>
 
-      <div className="desc-text">{props.item.desc}</div>
+      <div className='desc-text'>{props.item.desc}</div>
 
-      <div className="wrapper flex items-center">
-        <Link href={props.item.url} className="info-text service-link">
+      <div className='wrapper flex items-center'>
+        <Link href={props.item.url} className='info-text service-link'>
           Read More
         </Link>
 
         <ArrowUpOutlined
-          className="service-arrow-link cursor-pointer text-2xl text-white"
+          className='service-arrow-link cursor-pointer text-2xl text-white'
           rotate={45}
         />
       </div>

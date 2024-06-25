@@ -9,3 +9,7 @@ export { default as behance } from "./behance.svg";
 export { default as dribble } from "./dribble.svg";
 export { default as facebook } from "./facebook.svg";
 export { default as twitter } from "./twitter.svg";
+export { default as mobile } from "./mobile.svg";
+export { default as creativity } from "./creativity.svg";
+export { default as optimization } from "./optimization.svg";
+export { default as star } from "./star.svg";

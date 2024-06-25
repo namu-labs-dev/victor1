@@ -1,3 +1,4 @@
+import AnimatedComponent from "~/components/Components/AnimatedComponent/AnimatedComponent";
 import "./custom.css";
 import { CounterComponent } from "~/components/Components/CounterComponent/CounterComponent";
 
@@ -13,8 +14,12 @@ type Props = {
 
 export const CounterModule = (props: Props) => {
   return (
-    <div className="flex w-full flex-wrap items-center justify-between bg-black p-8 pb-16 gap-4">
-      <CounterComponent counter={props.counter} />
+    <div className='bg-black p-8'>
+      <AnimatedComponent direction='right'>
+        <div className='flex w-full flex-wrap items-center justify-between gap-4 bg-black pb-16'>
+          <CounterComponent counter={props.counter} />
+        </div>
+      </AnimatedComponent>
     </div>
   );
 };

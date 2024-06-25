@@ -3,10 +3,6 @@
   --opacity-gray: rgba(255, 255, 255, 0.25);
 }
 
-.team-container {
-  /* transition: all 0.5s ease-in; */
-}
-
 .team-info-text {
   color: var(--primary) !important;
   font-size: 1.2rem !important;
@@ -14,19 +10,35 @@
 
 .member-name {
   color: white;
-  font-size: 1.4rem !important;
-  /* transition: all 0.5s ease-in; */
+  font-size: 1.3rem !important;
 }
 
-.detail-container {
-  visibility: hidden;
+.team-role {
+  font-size: 1rem;
+}
+
+.view-detail-container {
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  margin-top: -70px;
+}
+
+.team-name-container {
+  transition: all 0.3s ease-in;
+}
+
+.team-container:hover .view-detail-container {
+  opacity: 1;
+}
+
+.team-container:hover .team-name-container {
+  opacity: 0;
 }
 
 .view-details {
   font-weight: 500;
   font-size: 1rem !important;
   text-decoration: underline;
-  /* transition: all 0.5s ease-in; */
 }
 
 .member-arrow-link {
@@ -45,23 +57,6 @@
   justify-content: center;
   padding: 16px;
   transition: all 0.5s ease-in;
-}
-
-.team-container:hover .name-container {
-  visibility: hidden;
-}
-
-.team-container:hover .desc-text {
-  visibility: hidden;
-}
-
-.team-container:hover .detail-container {
-  visibility: visible;
-}
-
-.team-container:hover .view-details {
-  color: var(--primary);
-  text-decoration: underline;
 }
 
 .social-icon:hover {

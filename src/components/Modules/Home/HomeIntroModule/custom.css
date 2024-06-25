@@ -4,10 +4,11 @@
 }
 
 .intro {
-  background: linear-gradient(to left, #0f2a1e, black, black);
-  animation: pulse 6s infinite;
+  background-color: black;
   height: auto;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .intro-design-text {
@@ -22,6 +23,7 @@
 .transformLink {
   transform: rotate(180deg);
   font-size: 16px;
+  transition: all 0.5s ease-in;
 }
 
 .transformLink:hover {
@@ -29,18 +31,19 @@
   text-decoration: underline;
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    background: linear-gradient(to left, black, black, black);
-  }
-  50% {
-    background: linear-gradient(to left, #0f2a1e, black, black);
-  }
+.transformIcon {
+  transform: rotate(270deg);
+  font-size: 16px;
+  transition: all 0.5s ease-in;
+}
+
+.transformIcon:hover {
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 .hero {
-  margin-top: -75px;
+  margin-top: -30px;
 }
 
 .hero-image-container {
@@ -83,7 +86,7 @@
   }
 
   .hero {
-    margin-top: -20px;
+    margin-top: -110px;
   }
 
   .hero-image-container {

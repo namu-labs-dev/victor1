@@ -35,20 +35,20 @@ export const CounterAtom = (props: Props) => {
   }, [inView, props.item.no]);
 
   return (
-    <div className="counter-container flex flex-col gap-4 max-480:mt-6">
+    <div className='counter-container mt-6 flex flex-col gap-4 sm:mt-0'>
       <CheckCircleOutlined
         style={{ color: COLORS.primary }}
-        className="text-2xl"
+        className='text-2xl'
       />
 
       <div
         ref={ref}
-        className={`${inter.className} counter-number text-9xl font-black text-transparent max-480:text-7xl`}
+        className={`${inter.className} counter-number text-6xl font-black text-transparent sm:text-7xl md:text-9xl`}
       >
         {props.item.title === "Project’s Complete" ? `${count}K` : count}
       </div>
 
-      <div className="desc-text max-480:w-3/4">{props.item.title}</div>
+      <div className='desc-text max-480:w-3/4'>{props.item.title}</div>
     </div>
   );
 };

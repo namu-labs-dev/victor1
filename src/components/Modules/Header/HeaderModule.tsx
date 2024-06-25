@@ -38,22 +38,22 @@ export const HeaderModule = (props: Props) => {
       <LogoAtom />
 
       {menuOpen && (
-        <div className='max-920:flex absolute top-20 z-50 hidden h-auto w-full flex-col bg-neutral-800 p-6 py-2'>
+        <div className='absolute top-20 z-50 hidden h-auto w-full flex-col bg-neutral-800 p-6 py-2 max-920:flex'>
           <HeaderComponent {...props.headerProps} />
         </div>
       )}
 
       <div className='flex items-center gap-6 text-white'>
-        <div className='max-920:hidden flex items-center gap-6'>
+        <div className='flex items-center gap-6 max-920:hidden'>
           <HeaderComponent {...props.headerProps} />
         </div>
 
         <MenuOutlined
-          className='max-920:flex hidden cursor-pointer text-lg text-white'
+          className='hidden cursor-pointer text-lg text-white max-920:flex'
           onClick={() => setMenuOpen(!menuOpen)}
         />
 
-        <SearchOutlined className='cursor-pointer text-lg text-white' />
+        <SearchOutlined className='hidden cursor-pointer text-lg text-white sm:block' />
 
         <div className='util-icon-container'>
           <SVGAtom iconName='toggler' color='white' width={24} height={24} />
