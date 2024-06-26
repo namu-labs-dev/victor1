@@ -10,12 +10,12 @@ type Props = {
 
 export const LinkListAtom = (props: Props) => {
   return (
-    <Link href={props.to} className=''>
-      <div className='transformLink hidden lg:block'>{props.title}</div>
-
-      <div className='transformIcon block lg:hidden'>
-        <SVGAtom iconName={props.icon} color='white' width={20} height={20} />
+    <Link href={props.to} className='flex transform items-center gap-2'>
+      <div className=''>
+        <SVGAtom iconName={props.icon} color='white' width={16} height={16} />
       </div>
+
+      <div className='max-920:hidden'>{props.title}</div>
     </Link>
   );
 };

@@ -50,11 +50,11 @@ export const BlogAtom = (props: Props) => {
         {props.title}
       </Link>
 
-      <Link href={props.url} className='flex items-center gap-4'>
+      <Link href={props.url} className='flex items-center gap-2 read-more-link'>
         <div className='info-text blog-read-more'>Read More</div>
 
         <ArrowUpOutlined
-          className='blog-arrow-icon cursor-pointer text-lg text-white'
+          className='blog-arrow-icon cursor-pointer text-lg'
           rotate={45}
         />
       </Link>

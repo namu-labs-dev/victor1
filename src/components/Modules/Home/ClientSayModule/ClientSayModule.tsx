@@ -37,6 +37,10 @@ export const ClientSayModule = (props: Props) => {
               {props.testimonies.map((item) => (
                 <ClientSayAtom key={item.id} {...item} />
               ))}
+
+              {props.testimonies.slice(0, 1).map((item, index) => (
+                <ClientSayAtom key={index} {...item} />
+              ))}
             </CarouselComponent>
           </div>
 

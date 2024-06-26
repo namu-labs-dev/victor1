@@ -32,8 +32,8 @@ export const footerStore: FooterStore = {
   socialIcons: [
     { id: 1, title: "Facebook", icon: "facebook" },
     { id: 2, title: "Twitter", icon: "twitter" },
-    { id: 1, title: "Dribble", icon: "dribble" },
-    { id: 1, title: "Behance", icon: "behance" },
+    { id: 3, title: "Dribble", icon: "dribble" },
+    { id: 4, title: "Behance", icon: "behance" },
   ],
   quickLinks: [
     { id: 1, title: "Home", url: "/" },

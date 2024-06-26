@@ -37,6 +37,10 @@ export const AboutTestimonialModule = (props: Props) => {
               {props.testimonies.map((item) => (
                 <AboutTestimonialAtom key={item.id} {...item} />
               ))}
+
+              {props.testimonies.slice(0, 1).map((item, index) => (
+                <AboutTestimonialAtom key={index} {...item} />
+              ))}
             </CarouselComponent>
           </div>
         </AnimatedComponent>

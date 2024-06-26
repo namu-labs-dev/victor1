@@ -8,7 +8,7 @@ type Props = {
 
 export const CounterModule = (props: Props) => {
   return (
-    <div className='bg-black p-8'>
+    <div className='bg-black p-8 w-full'>
       <AnimatedComponent direction='right'>
         <div className='flex w-full flex-wrap items-center justify-between gap-4 bg-black pb-16'>
           <CounterComponent {...props.counter} />

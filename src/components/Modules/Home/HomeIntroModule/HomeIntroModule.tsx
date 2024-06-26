@@ -52,7 +52,7 @@ export const HomeIntroModule = (props: Props) => {
 
       <AnimatedComponent direction='left'>
         <div className='hero flex h-96 w-full items-center pl-8' style={{}}>
-          <div className='hero-image-container relative h-full w-10/12 lg:w-11/12'>
+          <div className='hero-image-container relative h-full w-[85%] lg:w-11/12'>
             <Image
               src='/jpgs/hero.jpg'
               alt='hero'
@@ -62,7 +62,7 @@ export const HomeIntroModule = (props: Props) => {
             />
           </div>
 
-          <div className='flex h-[50%] w-2/12 flex-col items-center justify-between py-0 text-white md:h-[90%] lg:h-full lg:w-1/12 lg:items-end'>
+          <div className='flex h-[50%] w-[15%] flex-col items-center justify-between text-white md:h-[90%] lg:h-full lg:w-1/12 lg:items-center lg:py-4'>
             <LinkListComponent {...props.navLinks} />
           </div>
         </div>

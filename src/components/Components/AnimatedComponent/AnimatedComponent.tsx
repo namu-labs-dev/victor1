@@ -1,4 +1,4 @@
-import { useEffect, type ReactNode } from "react";
+import { type PropsWithChildren, useEffect, type ReactNode } from "react";
 import { useAnimation, motion, type Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -8,7 +8,9 @@ type AnimatedComponentProps = {
   direction?: "left" | "right" | "top" | "bottom";
 };
 
-const AnimatedComponent = (props: AnimatedComponentProps) => {
+const AnimatedComponent = (
+  props: PropsWithChildren<AnimatedComponentProps>
+) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
