@@ -2,6 +2,7 @@ import Image from "next/image";
 import "./custom.css";
 import { Inter } from "next/font/google";
 import AnimatedComponent from "~/components/Components/AnimatedComponent/AnimatedComponent";
+import { VideoLinkComponent } from "~/components/Components/VideoLinkComponent/VideoLinkComponent";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -44,15 +45,7 @@ export const AboutIntroModule = () => {
       </AnimatedComponent>
 
       <AnimatedComponent direction='left'>
-        <div className='mt-12 h-[70vh] w-full'>
-          <iframe
-            src='https://www.youtube.com/embed/fOdo1GkzZAk?si=1oGSMxPiSyCack2B&controls=0&showinfo=0&rel=0&modestbranding=1&autoplay=1&mute=1'
-            width='100%'
-            height='100%'
-            allow='accelerometer; encrypted-media; gyroscope; picture-in-picture'
-            allowFullScreen
-          ></iframe>
-        </div>
+        <VideoLinkComponent />
       </AnimatedComponent>
 
       <div className='mt-16 flex flex-col items-center gap-8 lg:flex-row'>

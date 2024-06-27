@@ -15,7 +15,7 @@ export const whoWeAreStore = {
       icon: "mobile",
     },
     {
-      id: 1,
+      id: 3,
       title: "Optimize search engines",
       desc: "Quis autem vel eum iure reprehenderi qui ea voluptate velit esse quam nihile",
       icon: "optimization",
@@ -24,6 +24,6 @@ export const whoWeAreStore = {
   slide: [
     {id: 1, title:'Design & Branding'},
     {id: 2, title:'Web Development'},
-    {id: 1, title:'Mobile Apps'},
+    {id: 3, title:'Mobile Apps'},
   ]
 };

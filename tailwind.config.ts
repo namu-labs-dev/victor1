@@ -8,6 +8,7 @@ export default {
       colors: {
         "primary-color": "RGB(85, 230, 165)",
         "gray-opacity": "rgba(255, 255, 255, 0.25)",
+        "black-opacity": "rgba(0, 0, 0, 0.4)",
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
