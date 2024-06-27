@@ -36,7 +36,7 @@ export const AboutWhoWeAreModule = (props: Props) => {
 
       <Marquee
         speed={200}
-        className='overflow-hidden p-4 md:p-10'
+        className='overflow-hidden p-4 md:p-6'
         style={{ backgroundColor: COLORS.primary }}
       >
         <div className='z-10 flex items-center gap-10 px-8 py-0'>
