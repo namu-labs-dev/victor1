@@ -1,20 +1,14 @@
 import { LinkListAtom } from "~/components/Atoms/LinkListAtom/LinkListAtom";
 
-type NavLinks = {
-  id: number;
-  to: string;
-  title: string;
-};
-
-type Props = {
-  navLinks: NavLinks[];
-};
+type Props = React.ComponentProps<typeof LinkListAtom>[];
 
 export const LinkListComponent = (props: Props) => {
+  const navLinks = Object.values(props);
+
   return (
     <>
-      {props.navLinks.map((item) => (
-        <LinkListAtom key={item.id} item={item} />
+      {navLinks.map((item) => (
+        <LinkListAtom key={item.id} {...item} />
       ))}
     </>
   );

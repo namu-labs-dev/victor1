@@ -3,23 +3,8 @@
   --gray-opacity: rgba(255, 255, 255, 0.25);
 }
 
-.solution {
-  background: linear-gradient(to left, #0f2a1e, black, black);
-  animation: pulse 6s infinite;
-}
-
 .solution-design-text {
   font-size: 10rem;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    background: linear-gradient(to left, black, black, black);
-  }
-  50% {
-    background: linear-gradient(to left, #0f2a1e, black, black);
-  }
 }
 
 .solution-container {
@@ -92,7 +77,7 @@
     font-size: 4rem;
   }
 
-  .solution-title-text{
+  .solution-title-text {
     font-size: 2rem !important;
   }
 }

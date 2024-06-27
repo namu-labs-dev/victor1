@@ -8,12 +8,12 @@ export const chooseUsStore = {
       desc: "We denounce with righteous indignation and dislike beguiled demoralized charms",
     },
     {
-      id: 1,
+      id: 2,
       title: "No Contracts Needed",
       desc: "To take trivial example, which eundertakes laborious physical exercise except",
     },
     {
-      id: 1,
+      id: 3,
       title: "Powerful Terminal Lines",
       desc: "At vero eos et accusamus eto dignissimos duc blanditiis praesentium volupta",
     },

@@ -1,21 +1,14 @@
 import { RecentWorkAtom } from "~/components/Atoms/RecentWorkAtom/RecentWorkAtom";
 
-type RecentWorks = {
-  id: number;
-  title: string;
-  img: string;
-  url: string;
-};
-
-type Props = {
-  recentWorks: RecentWorks[];
-};
+type Props = React.ComponentProps<typeof RecentWorkAtom>[];
 
 export const RecentWorkComponent = (props: Props) => {
+  const recentWorks = Object.values(props);
+
   return (
     <>
-      {props.recentWorks.map((item) => (
-        <RecentWorkAtom key={item.id} item={item} />
+      {recentWorks.map((item) => (
+        <RecentWorkAtom key={item.id} {...item} />
       ))}
     </>
   );

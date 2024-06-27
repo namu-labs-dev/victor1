@@ -1,0 +1,39 @@
+:root {
+  --primary: rgb(85, 230, 165);
+  --gray-opacity: rgba(255, 255, 255, 0.25);
+}
+
+.blog-info-text {
+  color: var(--primary) !important;
+  font-size: 1.2rem;
+}
+
+.blog-horizontal-line {
+  height: 1px;
+  width: auto;
+  background-color: var(--gray-opacity);
+}
+
+.blog-read-more {
+  color: var(--primary) !important;
+  font-size: 1rem !important;
+}
+
+.blog-arrow-icon {
+  color: var(--primary);
+  transition: all 0.5s ease-in;
+}
+
+.read-more-link:hover .blog-arrow-icon {
+  transform: translateX(10px);
+}
+
+.blog-item-title-text {
+  font-size: 1.4rem !important;
+  transition: all 0.5s ease-in;
+}
+
+.blog-item-title-text:hover {
+  color: white;
+  text-decoration: underline;
+}
