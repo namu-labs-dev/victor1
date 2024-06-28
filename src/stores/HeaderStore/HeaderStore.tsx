@@ -5,15 +5,15 @@ export const headerStore = {
       title: "Home",
       url: "/home",
       dropdown: [
-        { id: 1, title: "MultiPage", url: "/" },
-        { id: 2, title: "OnePage", url: "/" },
+        { id: 1, title: "MultiPage", url: "/home" },
+        { id: 2, title: "OnePage", url: "/home" },
       ],
     },
     { id: 2, title: "About Us", url: "/about", dropdown: [] },
     {
       id: 3,
       title: "Pages",
-      url: "/",
+      url: "#",
       dropdown: [
         { id: 1, title: "FAQs", url: "/" },
         { id: 2, title: "Products", url: "/" },
@@ -26,9 +26,9 @@ export const headerStore = {
     {
       id: 4,
       title: "Services",
-      url: "/",
+      url: "#",
       dropdown: [
-        { id: 1, title: "Our Services", url: "/" },
+        { id: 1, title: "Our Services", url: "/services" },
         { id: 2, title: "Service Detail One", url: "/" },
         { id: 3, title: "Service Detail Two", url: "/" },
       ],
@@ -36,7 +36,7 @@ export const headerStore = {
     {
       id: 5,
       title: "Projects",
-      url: "/",
+      url: "#",
       dropdown: [
         { id: 1, title: "Project Grid", url: "/" },
         { id: 2, title: "Project List", url: "/" },
@@ -46,7 +46,7 @@ export const headerStore = {
     {
       id: 6,
       title: "Blog",
-      url: "/",
+      url: "#",
       dropdown: [
         { id: 1, title: "Blog Grid", url: "/" },
         { id: 2, title: "Blog Standard", url: "/" },

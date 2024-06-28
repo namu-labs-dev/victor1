@@ -1,3 +1,4 @@
+import { Inter } from 'next/font/google';
 import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
@@ -12,6 +13,7 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        inter: ["var(--font-inter)", ...fontFamily.sans],
       },
       screens: {
         "max-480": { max: "480px" },

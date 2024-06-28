@@ -12,7 +12,7 @@ export const ServiceSlideAtom = (props: Props) => {
   return (
     <>
       <div
-        className={`${inter.variable} service-design-text text-[2rem] font-black text-black md:text-[4rem]`}
+        className={`${inter.variable} service-design-text text-[2rem] font-medium text-black md:text-[4rem]`}
       >
         {props.title}
       </div>

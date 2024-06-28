@@ -1,0 +1,114 @@
+:root {
+  --primary: rgb(85, 230, 165);
+  --gray-opacity: hsla(0, 0%, 100%, 0.25);
+  --container-color: rgb(2, 5, 10);
+}
+
+.service-intro-text {
+  font-size: 8rem;
+}
+
+.service-arrow-container {
+  background-color: var(--container-color);
+  transition: all 0.5s ease-in;
+}
+
+.service-title-text {
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.5s ease-in;
+}
+
+.service-arrow-link {
+  transition: all 0.5s ease-in;
+}
+
+.service-title-text:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.step-container:nth-child(2),
+.step-container:last-child {
+  margin-top: -60px;
+}
+
+.service-container:hover .service-arrow-container {
+  background-color: var(--primary);
+}
+
+.service-container:hover .service-title-text {
+  text-decoration: underline;
+}
+
+.service-container:hover .service-arrow-link {
+  color: var(--container-color);
+}
+
+.id-text{
+  transition: all 0.5s ease-in;
+}
+
+.service-container:hover .id-text{
+  color: white;
+}
+
+.step-container {
+  background-color: var(--container-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.step-container:hover {
+  background-color: var(--primary);
+  color: black;
+}
+
+.step-container:hover .service-title-text,
+.step-container:hover .step-text {
+  color: black;
+}
+
+.divider,
+.step-text {
+  transition: all 0.5s ease-in;
+}
+
+.step-container:hover .divider {
+  background-color: black;
+}
+
+.step-two {
+  transition: all 0.5s ease-in;
+  visibility: hidden;
+}
+
+.step-container:hover .step-two {
+  transform: translate(10px, 10px);
+  visibility: visible;
+  border: 1px solid var(--gray-opacity);
+  border-left: transparent;
+  border-top: transparent;
+}
+
+@media screen and (max-width: 920px) {
+  .service-intro-text {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-intro-text {
+    font-size: 3rem;
+  }
+
+  .step-container:nth-child(2),
+  .step-container:last-child {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service-intro-text {
+    font-size: 2rem;
+  }
+}
